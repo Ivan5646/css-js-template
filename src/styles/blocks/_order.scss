@@ -1,0 +1,60 @@
+.order {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	margin-bottom: 20px;
+	background-image: url("../../img/womanWhiteWide.jpg");
+	background-repeat: no-repeat;
+	
+	.container {
+		display: flex;
+	}
+
+	.apply_noDiscount .apply_figure {
+		text-decoration: line-through;
+	}
+
+	&_form {
+		width: 42%;
+
+		h2 {
+			margin: 0 auto 10px;
+			font-size: 26px;
+		}
+	}
+
+	&_product {
+		background-image: url("../../img/product.png");
+		background-repeat: no-repeat;
+		width: 58%;
+		background-size: 10%;
+		background-position: 0% 80%;
+	}
+
+	@media screen and (max-width: 980px) { 
+		&_product { 
+			background-position: center;
+		}
+	}
+
+	@media screen and (max-width: 520px) { 
+		.container {
+			flex-direction: column;
+		}
+
+		&_form, &_product {
+			width: 100%;
+			order: 1;
+		}
+
+		&_form {
+			h2 {
+				text-align: center;
+			}
+		}
+
+		&_product {
+			height: 200px;
+			order: 0;
+		}
+	}
+}

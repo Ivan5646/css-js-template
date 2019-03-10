@@ -1,0 +1,24 @@
+.footer {
+	.container {
+		div, p {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		p {
+			padding-top: 15px;
+		}
+	}
+
+	&_line {
+		width: 170px;
+		height: 1px;
+		background: black;
+		margin: 0 auto;
+	}
+
+	.politika {
+		padding-bottom: 20px;
+	}
+}
+

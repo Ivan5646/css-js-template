@@ -1,0 +1,103 @@
+.feature {
+	width: 50%;
+	margin-bottom: 40px;
+	font-style: italic;
+
+	&--acid, &--oil {
+		text-align: right;
+	}
+
+	&_header {
+		font-style: italic;
+		margin-bottom: 20px;
+		font-weight: 700;
+
+		// &--acid, &--oil {
+		// 	text-align: right;
+		// }
+	}
+
+	&_content {
+		background-image: url(../../img/pine.png);
+		background-repeat: no-repeat;
+		padding-left: 180px;
+		height: 118px;
+		padding-right: 70px;
+		font-size: 15px;
+
+		&--acid {
+			background-image: url(../../img/acid.png);
+			padding-left: 60px;
+			padding-right: 180px;
+			background-position: right center;
+		}
+
+		&--gel {
+			background-image: url(../../img/gel.png);
+		}
+
+		&--oil {
+			background-image: url(../../img/oil.png);
+			padding-left: 60px;
+			padding-right: 180px;
+			background-position: right center;
+		}
+	}
+
+	@media screen and (max-width: 980px) { 
+		width: 100%;
+		margin-bottom: 16px;
+
+		&_content { 
+			&--acid, &--oil { 
+				padding-left: 0;
+			}
+
+			&--pine, &--gel {
+				padding-right: 0;
+			}
+
+		}
+	}
+
+	@media screen and (max-width: 480px) { 
+		text-align: center;
+
+		&--oil {
+			margin-top: -10px;
+		}
+
+
+		&_content { 
+			background-position: top center;
+			padding-top: 131px;
+			
+			&--acid, &--oil { 
+				padding-left: 0;
+				padding-right: 0px;
+			}
+
+
+			&--pine, &--gel {
+				padding-right: 0;
+				padding-left: 0;
+			}
+
+			// &--gel {
+			// 	margin-bottom: 0;
+			// }
+		}
+	}
+
+}
+
+@media screen and (max-width: 480px) { 
+	.feature--gel, .feature--acid {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
