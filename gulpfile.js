@@ -17,6 +17,7 @@ var runSequence = require('run-sequence');
 var series = require('stream-series');
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('connect', function() {
     connect.server({
@@ -75,6 +76,20 @@ gulp.task('build-images', function() {
     return gulp.src('src/img/**/*.{gif,jpg,png,svg}')
         .pipe(gulp.dest('build/img'));
 });
+
+// gulp.task('build-images', function() { // compress for production
+//     gulp.src('src/img/*')
+//         .pipe(imagemin([
+//             imagemin.optipng({optimizationLevel: 5}),
+//             imagemin.svgo({
+//                 plugins: [
+//                     {removeViewBox: true},
+//                     {cleanupIDs: false}
+//                 ]
+//             })
+//         ]))
+//         .pipe(gulp.dest('build/img'))
+// });
 
 gulp.task('build-fonts', function() {
     return gulp.src('src/fonts/**/*.{otf,ttf,woff,eot}')
